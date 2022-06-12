@@ -12,7 +12,7 @@ class Query:
     @strawberry.field
     def characters(self, info, name: str = None) -> List[Character]:
             if name is None:
-                return fetch_data()
+                return fetch_characters()
             else:
                 res = [character for character in filter(lambda characters: characters.name == name, fetch_characters())]
                 return res
