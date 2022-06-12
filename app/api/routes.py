@@ -1,2 +1,3 @@
-BASE_URL = "/"
-API_URL = "/characters"
+class URL:
+    base_url = "/"
+    app_url = "/characters"
