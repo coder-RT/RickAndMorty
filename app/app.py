@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-mport strawberry
+import strawberry
 import uvicorn
 from fastapi import FastAPI
 from strawberry.asgi import GraphQL
