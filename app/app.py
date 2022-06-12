@@ -7,7 +7,7 @@ from strawberry.asgi import GraphQL
 from typing import List
 from utils.read_data import fetch_characters
 from db.model import Character
-from routes.routes import BASE_URL, API_URL
+from api.routes import BASE_URL, API_URL
 
 @strawberry.type
 class Query:
