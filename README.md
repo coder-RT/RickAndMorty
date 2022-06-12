@@ -16,7 +16,7 @@ The API should provide a GraphQL endpoint to enable the user to search for a lis
 
 # API
 ```
-http://0.0.0.0:9000/characters
+http://0.0.0.0:9000/v1/characters
 ```
 
 # **Request 1 : Search By Name**
