@@ -3,14 +3,12 @@
 import uvicorn
 from fastapi import FastAPI
 from api.routes import URL
+from api.base import base
 from api.characters import rick_and_morty_app
 
 app = FastAPI()
 
-@app.get(URL.base_url)
-async def root():
-    return {"message": "OK"}
-
+app.add_route(URL.base_url, base)
 app.add_route(URL.app_url, rick_and_morty_app)
 
 if __name__ == '__main__':
