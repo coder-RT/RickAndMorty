@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from strawberry.asgi import GraphQL
 from typing import List
-from utils.read_data import fetch_data
+from utils.read_data import fetch_characters
 from db.model import Character
 from routes.routes import BASE_URL, API_URL
 
@@ -14,7 +14,7 @@ class Query:
             if name is None:
                 return fetch_data()
             else:
-                res = [character for character in filter(lambda characters: characters.name == name, fetch_data())]
+                res = [character for character in filter(lambda characters: characters.name == name, fetch_characters())]
                 return res
 
 schema = strawberry.Schema(query=Query)

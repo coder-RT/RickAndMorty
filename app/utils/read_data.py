@@ -6,7 +6,7 @@ import rick_and_morty_data
 from enums import RickAndMortyDataEnum
 from model import Character
 
-def fetch_data():
+def fetch_characters():
     res = []
     for character_info_dict in rick_and_morty_data.data[RickAndMortyDataEnum.RESULTS]:
         res.append(Character(character_info_dict))
