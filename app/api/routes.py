@@ -1,3 +1,3 @@
 class URL:
     base_url = "/"
-    app_url = "/characters"
+    app_url = "/v1/characters"
